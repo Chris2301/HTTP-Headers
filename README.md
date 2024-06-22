@@ -620,7 +620,7 @@ NEL stands for Network Error Logging and is a response header. The server inform
 
 As you can see in the example the header has a JSON value and in the example all required fields are commented
 
-```html
+```json
 NEL: {
 "report_to": "default-reporting-group", //required
 "max_age": 86400, //required
@@ -672,13 +672,13 @@ These Link header relations provide hints and directives to browsers and search 
 
 NOTE: the `canonical` header, which is handy when you make use of subdomains.
 
-`Link: <https://example.com>; rel=preconnect` - Specifies resources that the page will need very soon, like establishing a TCP connection
-`Link: <https://example.com>; rel=dns-prefetch` - Hints to the browser to perform DNS resolution for specified domains in advance.
-`Link: <https://example.com/resource>; rel=prefetch` - Indicates resources that will be needed in the future, encouraging the browser to fetch them early.
-`Link: <https://example.com/page>; rel=prerender` - Suggests that the browser should render and load the specified resource in the background.
-`Link: <https://example.com/style.css>; rel=preload; as=style` - Directs the browser to fetch and cache the specified resource as soon as possible, without rendering.
-`Link: <https://example.com/canonical>; rel=canonical` - Specifies the preferred URL for a resource to avoid duplicate content issues in search engines.
-`Link: <https://example.com>; rel="alternate"; hreflang="es"` - Indicates the language and optional geographical restrictions of a document’s alternative URLs.
+- `Link: <https://example.com>; rel=preconnect` - Specifies resources that the page will need very soon, like establishing a TCP connection
+- `Link: <https://example.com>; rel=dns-prefetch` - Hints to the browser to perform DNS resolution for specified domains in advance.
+- `Link: <https://example.com/resource>; rel=prefetch` - Indicates resources that will be needed in the future, encouraging the browser to fetch them early.
+- `Link: <https://example.com/page>; rel=prerender` - Suggests that the browser should render and load the specified resource in the background.
+- `Link: <https://example.com/style.css>; rel=preload; as=style` - Directs the browser to fetch and cache the specified resource as soon as possible, without rendering.
+- `Link: <https://example.com/canonical>; rel=canonical` - Specifies the preferred URL for a resource to avoid duplicate content issues in search engines.
+- `Link: <https://example.com>; rel="alternate"; hreflang="es"` - Indicates the language and optional geographical restrictions of a document’s alternative URLs.
 
 ### Retry-After
 This response header tells the client in seconds how long it should wait to try a resource again.
